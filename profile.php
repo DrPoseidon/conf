@@ -15,38 +15,6 @@ $stmt = $connection->prepare('select A.id_report, S.name, S.email, R.name_report
 from application as A left join report as R on R.id_report=A.id_report left join speaker as S on S.id_speaker=R.id_speaker where A.id_speaker=?');
 $stmt->execute([$id_speaker]);
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-
-print_r($_SESSION['row']);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
 <!doctype html>
 <html lang="en">
